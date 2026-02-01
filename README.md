@@ -18,10 +18,7 @@ Bitmaps are read as grayscale images with pixel values normalised to `[0, 1]`, a
 - Flatten + dense layer (128 units) with dropout
 - Final 2-class softmax output
 
-
-```md
 ![CNN](docs/images/cnn_structure.pdf)
-```
 
 
 ## 3) Explanations
