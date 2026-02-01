@@ -1,7 +1,7 @@
 # lime_multiplexer
 
 ## Overview
-Source code to accompany Advancing Photonic Chip Design with Interpretable Machine Learning paper.
+Source code to accompany Advancing Photonic Chip Design with Interpretable Machine Learning by Pira et. al (https://doi.org/10.48550/arXiv.2505.09266).
 
 A CNN is trained to classify simulated multiplexer designs by bandwidth and then uses LIME to explain which image regions drive the model’s decisions.
 
