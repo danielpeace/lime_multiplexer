@@ -16,7 +16,7 @@ We train a simple sequential CNN using Adam optimiser with sparse categorical cr
 **CNN Structure**
 ![CNN](/docs/images/cnn.png)
 
-The final trained CNN model used in the paper is saved in [text](cnn_v4_combined_model_v1.h5) and can be loaded in the jupyter notebook.
+The final trained CNN model used in the paper is saved in [cnn_v4_combined_model_v1.h5](cnn_v4_combined_model_v1.h5) and can be loaded in the jupyter notebook.
 
 Training history for the CNN.
 
