@@ -18,8 +18,7 @@ Bitmaps are read as grayscale images with pixel values normalised to `[0, 1]`, a
 - Flatten + dense layer (128 units) with dropout
 - Final 2-class softmax output
 
-![CNN](docs/images/cnn_structure.pdf)
-
+![CNN](/docs/images/cnn.png)
 
 ## 3) Explanations
 Running the LIME algorithm on the input data set will generate 'explanations', ie. which features after segmentation are most important for classifying input multiplexer designs into the two classes. 
