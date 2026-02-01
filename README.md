@@ -1,11 +1,9 @@
 # lime_multiplexer
 
 ## Overview
-Source code to accompany *Advancing Photonic Chip Design with Interpretable Machine Learning* by Pira et. al (https://doi.org/10.48550/arXiv.2505.09266).
+This code applies local interpretable model-agnostic explanation (LIME) to a set of topologically inverse designed transverse mode multipelxers as presented *Advancing Photonic Chip Design with Interpretable Machine Learning* by Pira et. al (https://doi.org/10.48550/arXiv.2505.09266).
 
-Each notebook loads a series of 
-
-A CNN is trained to classify simulated multiplexer designs by bandwidth and then uses LIME to explain which image regions drive the model’s decisions.
+By applying the LIME algorithm to a small CNN trained to differentiate between two classes of high and low bandwidth multiplexers, we are able to use the LIME explanations to highlight particular regions within each class. Based on the identified regions we then modify the initial conditions of the inverse design optimisation in order to further improve the multiplexer bandwidths.
 
 ## 1) Input data
 Inverse designed mode multiplexers used in the paper are contained within the `multiplexer_combined_bandwidths/` folder. The multiplexers are categorised into two folders two class folders: `combined_high_bw` and `combined_low_bw` based on their simulated tranmission bandwidth of both modes.
@@ -29,5 +27,15 @@ Training history for the CNN.
 **Model Loss**
 ![CNN](/docs/images/cnn_v4_loss.png)
 
-## 3) Explanations
-Running the LIME algorithm on the input data set will generate 'explanations', ie. which features after segmentation are most important for classifying input multiplexer designs into the two classes. 
+## 3) LIME explanations
+The LIME section:
+
+- Loads the saved model (`cnn_v4_combined_model_v1.h5`).
+- Defines a `predict_fn` wrapper that converts LIME’s RGB input back into grayscale tensors for the CNN.
+- Uses `lime_image.LimeImageExplainer()` with SLIC superpixels to perturb images and estimate feature importance.
+- Writes out:
+  - Original images (`Original_*.png`)
+  - LIME overlays (`LIME_Explanation_*.png`)
+  - Raw binary/importance masks (`Mask_*.png`)
+
+The helper functions `mask_average` and `lime_class_heatmaps` aggregate the per-image masks into **class-level heatmaps** to visualize which regions are generally important for each bandwidth class.
