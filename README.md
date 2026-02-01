@@ -21,11 +21,11 @@ The final trained CNN model used in the paper is saved in [text](cnn_v4_combined
 Training history for the CNN.
 
 **Model Accuracy**
-![CNN](/docs/images/cnn_v4_accuracy.png)
+![model_acc](/docs/images/cnn_v4_accuracy.png)
 
 
 **Model Loss**
-![CNN](/docs/images/cnn_v4_loss.png)
+![model_loss](/docs/images/cnn_v4_loss.png)
 
 ## 3) LIME explanations
 The LIME section:
@@ -39,3 +39,6 @@ The LIME section:
   - Raw binary/importance masks (`Mask_*.png`)
 
 The helper functions `mask_average` and `lime_class_heatmaps` aggregate the per-image masks into **class-level heatmaps** to visualize which regions are generally important for each bandwidth class.
+
+**Output Heatmap**
+![Heatmap](/docs/images/cnn_v4_loss.png)
