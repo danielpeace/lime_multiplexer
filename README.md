@@ -18,8 +18,6 @@ We train a simple sequential CNN using Adam optimiser with sparse categorical cr
 
 The final trained CNN model used in the paper is saved in [cnn_v4_combined_model_v1.h5](cnn_v4_combined_model_v1.h5) and can be loaded in the jupyter notebook.
 
-Training history for the CNN.
-
 **Model Accuracy**
 
 ![model_acc](/docs/images/cnn_v4_accuracy.png)
@@ -44,4 +42,4 @@ The helper functions `mask_average` and `lime_class_heatmaps` aggregate the per-
 
 **Output Heatmap**
 
-![heatmap](/docs/images/cnn_v4_loss.png)
+![heatmap](/docs/images/heatmap.png)
