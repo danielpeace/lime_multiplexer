@@ -42,4 +42,4 @@ The helper functions `mask_average` and `lime_class_heatmaps` aggregate the per-
 
 **Output Heatmap**
 
-![heatmap](/docs/images/heatmap.png)
+![heatmap](/docs/images/heatmaps.png)
